@@ -1,4 +1,4 @@
-object ListUtilMain{
+object ListUtil{
 
     def map[A, B](func: A => B, list: List[A]): List[B] = {
         list match {

@@ -1,4 +1,4 @@
-object ComprehensionsYieldMain{
+object ComprehensionsYield{
 
     def sum_even_numbers = (L: List[Int]) => {
         var sum = 0

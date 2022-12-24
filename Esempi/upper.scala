@@ -25,7 +25,7 @@ println(Upper.upper("A", "First", "Scala", "Program"))
 */
 
 /*
-Questa terza versione è eseguibile con:
+Questa terza versione è eseguibile anche con:
     scalac upper.scala
     scala Upper <argomenti>
 */

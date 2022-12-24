@@ -1,4 +1,4 @@
-object OptionsMain {
+object Options {
 
   /*
   Implementazione del metodo get fornita nativamente:

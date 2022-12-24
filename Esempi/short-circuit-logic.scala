@@ -19,7 +19,7 @@ case object False extends Bool {
 
 }
 
-object ShortCircuitLogicMain{
+object ShortCircuitLogic{
 
     def bottom: () => Nothing = () => bottom()
 

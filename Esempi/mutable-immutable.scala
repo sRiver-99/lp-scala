@@ -1,4 +1,4 @@
-object MutableImmutableMain{
+object MutableImmutable{
 
     def main(args: Array[String]) = {
         val array: Array[String] = new Array(3)
