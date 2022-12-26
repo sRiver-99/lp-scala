@@ -22,16 +22,21 @@ object MethodsFunctions{
             idMethod("hello") +" [T => T]\n")
         val idFunctionFromMethod = idMethod _
         printf("idFunctionFromMethod [Nothing => Nothing]\n")
-        val idFunctionFromMethodInt = idMethod[Int] _
-        printf("idFunctionFromMethodInt(5) = " + idFunctionFromMethodInt(5) + " [Int => Int]\n")
-        val idFunctionFromMethodString = idMethod[String] _
-        printf("idFunctionFromMethodString(\"world\") = " + idFunctionFromMethodString("world") +
-            " [String => String]\n")
         /*
         Se un metodo che usa il polimorfismo parametrico viene trasformato in una funzione senza
         specificare di quali tipi saranno i parametri polimorfi, diventerà una funzione di tipo
         Nothing => Nothing e non potrà essere chiamata
         */
+        val idFunctionFromMethodInt = idMethod[Int] _
+        printf("idFunctionFromMethodInt(5) = " + idFunctionFromMethodInt(5) + " [Int => Int]\n")
+        val idFunctionFromMethodString = idMethod[String] _
+        printf("idFunctionFromMethodString(\"world\") = " + idFunctionFromMethodString("world") +
+            " [String => String]\n")
+        val idFunctionFromMethodAny = idMethod[Any] _
+        printf("idFunctionFromMethodAny(6) = " + idFunctionFromMethodAny(6) +
+            " [Any => Any]\n")
+        printf("idFunctionFromMethodAny(\"Lorem ipsum\") = " + idFunctionFromMethodAny("Lorem ipsum") +
+            " [Any => Any]\n")
     }
 
 }
