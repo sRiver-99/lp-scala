@@ -16,16 +16,18 @@ object MethodsFunctions{
             succFunctionFromMethod(3) + " [Int => Int]\n")
         /*
         I metodi devono essere trasformati in funzioni (applicazione parziale) per poter essere
-        assegnati ad una variabile o per essere passati come argomenti
+        assegnati ad una variabile, tuttavia possono essere passati come argomenti senza effettuare
+        la conversione
         */
         printf("idMethod(4) = " + idMethod(4) + " [T => T]\nidMethod(\"hello\") = " +
-            idMethod("hello") +" [T => T]\n")
+            idMethod("hello") + " [T => T]\n")
         val idFunctionFromMethod = idMethod _
         printf("idFunctionFromMethod [Nothing => Nothing]\n")
         /*
         Se un metodo che usa il polimorfismo parametrico viene trasformato in una funzione senza
         specificare di quali tipi saranno i parametri polimorfi, diventerà una funzione di tipo
-        Nothing => Nothing e non potrà essere chiamata
+        Nothing => Nothing e non potrà essere chiamata.
+        Non è possibile passare direttamente tale metodo come parametro
         */
         val idFunctionFromMethodInt = idMethod[Int] _
         printf("idFunctionFromMethodInt(5) = " + idFunctionFromMethodInt(5) + " [Int => Int]\n")
